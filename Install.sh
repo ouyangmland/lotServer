@@ -68,7 +68,7 @@ function Install()
   [ -z "$Eth_List" ] && echo "I can not find the server pubilc Ethernet! " && exit 1
   Eth=$(echo "$Eth_List" |head -n1)
   [ -z "$Eth" ] && Uninstall "Error! Not found a valid ether. "
-  Mac=$(cat /sys/class/net/${Eth}/address)
+  Mac=$(cat /sys/class/net/eth0/address)
   [ -z "$Mac" ] && Uninstall "Error! Not found mac code. "
   URLKernel='https://github.com/MoeClub/lotServer/raw/master/lotServer.log'
   AcceData=$(wget --no-check-certificate -qO- "$URLKernel")
