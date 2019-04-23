@@ -68,7 +68,7 @@ function Install()
   [ -z "$Eth_List" ] && echo "I can not find the server pubilc Ethernet! " && exit 1
   Eth=$(echo "$Eth_List" |head -n1)
   [ -z "$Eth" ] && Uninstall "Error! Not found a valid ether. "
-  Mac=$(cat /sys/class/net/eth0/address)
+  Mac=$(cat /sys/class/net/${Eth}/address)
   [ -z "$Mac" ] && Uninstall "Error! Not found mac code. "
   URLKernel='https://github.com/MoeClub/lotServer/raw/master/lotServer.log'
   AcceData=$(wget --no-check-certificate -qO- "$URLKernel")
@@ -83,10 +83,10 @@ function Install()
   AcceBin="acce-"$KNV"-["$KNA"_"$KNN"_"$KNK"]"
   mkdir -p "${AcceTmp}/bin/"
   mkdir -p "${AcceTmp}/etc/"
-  wget --no-check-certificate -qO "${AcceTmp}/bin/${AcceBin}" "https://github.com/MoeClub/lotServer/raw/master/${MyKernel}"
+  wget --no-check-certificate -qO "${AcceTmp}/bin/${AcceBin}" "https://github.com/ouyangmland/lotServer/raw/master/${MyKernel}"
   [ ! -f "${AcceTmp}/bin/${AcceBin}" ] && Uninstall "Download Error! Not Found ${AcceBin}. "
   Welcome;
-  wget --no-check-certificate -qO "/tmp/lotServer.tar" "https://github.com/MoeClub/lotServer/raw/master/lotServer.tar"
+  wget --no-check-certificate -qO "/tmp/lotServer.tar" "https://github.com/ouyangmalnd/lotServer/raw/master/lotServer.tar"
   tar -xvf "/tmp/lotServer.tar" -C /tmp
   acce_ver=$(acce_check ${KNV})
   wget --no-check-certificate -qO "${AcceTmp}/etc/apx.lic" "https://www.speedsvip.com/apx.php?mac=${Mac}"
