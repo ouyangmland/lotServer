@@ -9,7 +9,7 @@ bash <(wget --no-check-certificate -qO- https://github.com/ouyangmland/lotServer
 
 ### 指定内核安装
 ```
-bash <(wget --no-check-certificate -qO- https://github.com/MoeClub/lotServer/raw/master/Install.sh) install <Kernel Version>
+bash <(wget --no-check-certificate -qO- https://github.com/ouyangmland/lotServer/raw/master/Install.sh) install <Kernel Version>
 ```
 
 ## 完全卸载
