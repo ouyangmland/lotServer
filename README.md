@@ -14,7 +14,7 @@ bash <(wget --no-check-certificate -qO- https://github.com/MoeClub/lotServer/raw
 
 ## 完全卸载
 ```
-bash <(wget --no-check-certificate -qO- https://github.com/MoeClub/lotServer/raw/master/Install.sh) uninstall
+bash <(wget --no-check-certificate -qO- https://github.com/ouyangmland/lotServer/raw/master/Install.sh) uninstall
 ```
 
 ## 许可证生成 -->[萌咖 API接口](https://moeclub.org/api)  
