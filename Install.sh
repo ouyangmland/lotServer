@@ -117,6 +117,7 @@ function Uninstall()
     rm -rf /etc/rc.d/init.d/lotServer >/dev/null 2>&1
     rm -rf /etc/rc.d/rc*.d/*lotServer >/dev/null 2>&1
   fi
+    rm -rf /usr/lib/systemd/system/lotserver.service
   if [ -d /etc/init.d ]; then
     rm -rf /etc/init.d/*serverSpeeder* >/dev/null 2>&1
     rm -rf /etc/rc*.d/*serverSpeeder* >/dev/null 2>&1
